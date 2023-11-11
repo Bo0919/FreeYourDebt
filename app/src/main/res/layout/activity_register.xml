@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#673AB7"
+    tools:context=".RegisterActivity">
+
+    <EditText
+        android:id="@+id/txtPassInput4Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="Enter your Password"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text=""
+        android:textColorHint="#C5CAE9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmailInput"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="15dp"
+        android:text="E-mail Address"
+        android:textColor="#C5CAE9"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtEmailInput"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLastName" />
+
+    <TextView
+        android:id="@+id/txtLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="15dp"
+        android:text="Last Name"
+        android:textColor="#C5CAE9"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtLastNameInput"
+        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFirstName" />
+
+    <EditText
+        android:id="@+id/txtEmailInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Enter your E-mail Address"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:text=""
+        android:textColorHint="#C5CAE9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLastNameInput" />
+
+    <EditText
+        android:id="@+id/txtLastNameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Enter your Last Name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text=""
+        android:textColorHint="#C5CAE9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFirstNameInput" />
+
+    <TextView
+        android:id="@+id/txtFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:text="Firsta Name"
+        android:textColor="#C5CAE9"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtFirstNameInput"
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgRegister" />
+
+    <ImageView
+        android:id="@+id/imgRegister"
+        android:layout_width="414dp"
+        android:layout_height="248dp"
+        android:contentDescription="img of Register"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/register"
+        tools:ignore="VisualLintBounds" />
+
+    <EditText
+        android:id="@+id/txtFirstNameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Enter your First Name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="Name"
+        android:textColor="#C5CAE9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgRegister" />
+
+    <TextView
+        android:id="@+id/txtPass4Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="15dp"
+        android:text="Password"
+        android:textColor="#C5CAE9"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtPassInput4Register"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <Button
+        android:id="@+id/btnCancelRegister"
+        android:layout_width="131dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="48dp"
+        android:background="#F44336"
+        android:text="@string/btnCancel"
+        android:textColorLink="#FFEB3B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassInput4Register"
+        app:rippleColor="#FFEB3B" />
+
+    <Button
+        android:id="@+id/btnSubmitRegister"
+        android:layout_width="131dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="56dp"
+        android:background="#4CAF50"
+        android:text="@string/btnSubmit"
+        android:textColorLink="#FFEB3B"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancelRegister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPass4Register"
+        app:rippleColor="#FFEB3B" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

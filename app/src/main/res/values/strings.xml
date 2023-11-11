@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">project</string>
+    <string name="btnLogin">Log In</string>
+    <string name="btnRegister">Register</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="userInput">Username:</string>
+    <string name="passInput">Password:</string>
+    <string name="imgMain">login image</string>
+    <string name="passHint">Enter your password</string>
+    <string name="usernameHint">Enter your username</string>
+    <string name="btnAdd">"Add new/Calculator "</string>
+    <string name="btnManagement">Management</string>
+    <string name="btnList">List/Reminder</string>
+    <string name="btnLogout">Logout</string>
+    <string name="debtInput">Enter doubt\'s name</string>
+    <string name="interestInput">Enter the interest rate</string>
+    <string name="txtMountInput">Enter dubt amount</string>
+    <string name="debtName">Debt Name</string>
+    <string name="debtType">Debt Type</string>
+    <string name="debtAmount">Debt Amount</string>
+    <string name="debtInterest">Debt rate</string>
+    <string name="terms">Debt Terms</string>
+    <string name="termsInput">Enter pay terms</string>
+    <string name="btnModify">Modify debt</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="txtMemo">Memo</string>
+    <string name="txtDebtMemo">Enter memo</string>
+    <string-array name="DebtType">
+        <item>House</item>
+        <item>Car</item>
+        <item>Invest</item>
+        <item>Credit card</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>
