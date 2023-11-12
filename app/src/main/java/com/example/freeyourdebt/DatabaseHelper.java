@@ -92,7 +92,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public boolean addDebtData(String username,String debtname,String debttype, String debtamount,String debtrate,String debtterms,
-                           String debtmemo,String paymentcycle,String paymentamount, String creatdata){
+                           String debtmemo,String paymentcycle,String paymentamount){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
 
         if (!sqLiteDatabase.isReadOnly()) {
@@ -109,9 +109,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(T2COL8,debtmemo);
         values.put(T2COL9,paymentcycle);
         values.put(T2COL10,paymentamount);
-        values.put(T2COL11,creatdata);
+        values.put(T2COL11,currentDateandTime);
 
-        long l = sqLiteDatabase.insert(TABLE1_NAME,null,values);
+        long l = sqLiteDatabase.insert(TABLE2_NAME,null,values);
 
         if(l>0)
             return true;
@@ -119,7 +119,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
     }
     public boolean updateDebtRec(String bid,String debtname,String debttype, String debtamount,String debtrate,String debtterms,
-                                 String debtmemo,String paymentcycle,String paymentamount, String modifydate){
+                                 String debtmemo,String paymentcycle,String paymentamount){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         if (!sqLiteDatabase.isReadOnly()) {
             // Enable foreign key constraints
@@ -134,7 +134,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(T2COL8,debtmemo);
         values.put(T2COL9,paymentcycle);
         values.put(T2COL10,paymentamount);
-        values.put(T2COL11,modifydate);
+        values.put(T2COL12,currentDateandTime);
         int i = sqLiteDatabase.update(TABLE2_NAME,
                 values,"bid=?",new String[]{bid});
         if(i>0)

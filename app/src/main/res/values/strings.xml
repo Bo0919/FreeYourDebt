@@ -14,17 +14,18 @@
     <string name="btnLogout">Logout</string>
     <string name="debtInput">Enter doubt\'s name</string>
     <string name="interestInput">Enter the interest rate</string>
-    <string name="txtMountInput">Enter dubt amount</string>
+    <string name="txtMountInput">Enter debt amount</string>
     <string name="debtName">Debt Name</string>
     <string name="debtType">Debt Type</string>
     <string name="debtAmount">Debt Amount</string>
-    <string name="debtInterest">Debt rate</string>
-    <string name="terms">Debt Terms</string>
+    <string name="debtInterest">Debt rate(%)</string>
+    <string name="terms">Debt TermYears</string>
     <string name="termsInput">Enter pay terms</string>
     <string name="btnModify">Modify debt</string>
     <string name="btnSubmit">Submit</string>
     <string name="txtMemo">Memo</string>
     <string name="txtDebtMemo">Enter memo</string>
+    <string name="txtPaymentCycle">Payment Cycle   *Compound is Monthly(APY)</string>
     <string-array name="DebtType">
         <item>House</item>
         <item>Car</item>
