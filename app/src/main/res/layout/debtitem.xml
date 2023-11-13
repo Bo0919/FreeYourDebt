@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#1C1C40"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgDebtItem"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="#FFEB3B"
+                android:contentDescription="imgItems"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_currency_exchange_24" />
+
+            <TextView
+                android:id="@+id/txtItemName"
+                android:layout_width="145dp"
+                android:layout_height="24dp"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/txtItemNameTxt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtItemNameTxt"
+                android:layout_width="80dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="5dp"
+                android:text="Debt Name:"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/imgDebtItem"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtItemType"
+                android:layout_width="110dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="5dp"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgDebtItem"
+                app:layout_constraintTop_toBottomOf="@+id/txtItemTypeTxt" />
+
+            <TextView
+                android:id="@+id/txtItemTypeTxt"
+                android:layout_width="110dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="1dp"
+                android:text="Payment Type:"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/imgDebtItem"
+                app:layout_constraintTop_toBottomOf="@+id/txtItemNameTxt" />
+
+            <TextView
+                android:id="@+id/txtItemAmountTxt"
+                android:layout_width="110dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="1dp"
+                android:text="Debt Amount:"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/txtItemTypeTxt"
+                app:layout_constraintTop_toBottomOf="@+id/txtItemName" />
+
+            <TextView
+                android:id="@+id/txtItemPaymentTxt"
+                android:layout_width="110dp"
+                android:layout_height="20dp"
+                android:text="Payment:"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/txtItemAmountTxt"
+                app:layout_constraintTop_toBottomOf="@+id/txtItemID" />
+
+            <TextView
+                android:id="@+id/txtItemAmount"
+                android:layout_width="110dp"
+                android:layout_height="25dp"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtItemType"
+                app:layout_constraintTop_toBottomOf="@+id/txtItemAmountTxt" />
+
+            <TextView
+                android:id="@+id/txtItemPayment"
+                android:layout_width="110dp"
+                android:layout_height="25dp"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtItemAmount"
+                app:layout_constraintTop_toBottomOf="@+id/txtItemPaymentTxt"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/txtItemID"
+                android:layout_width="72dp"
+                android:layout_height="24dp"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/txtItemIDTxt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtItemIDTxt"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:text="ID:"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/txtItemName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -72,6 +72,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public Cursor viewTheDebt(int bid) {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+        String query = "SELECT * FROM " + TABLE2_NAME + " WHERE bid = ?";
+        Cursor cursor = sqLiteDatabase.rawQuery(query,new String[]{Integer.toString(bid)});
+
+        return cursor;
+    }
+
     public boolean addUserData(String username,String password){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         if (!sqLiteDatabase.isReadOnly()) {

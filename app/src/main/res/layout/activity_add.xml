@@ -42,6 +42,7 @@
         android:ems="10"
         android:hint="@string/debtInput"
         android:inputType="text"
+        android:textColor="#FFFFFF"
         android:textColorHint="#C5CAE9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -56,6 +57,7 @@
         android:ems="10"
         android:hint="@string/txtDebtMemo"
         android:inputType="text"
+        android:textColor="#FFFFFF"
         android:textColorHint="#C5CAE9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTermInput" />
@@ -71,6 +73,7 @@
         android:hint="@string/txtMountInput"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
+        android:textColor="#FFFFFF"
         android:textColorHint="#C5CAE9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerDebtType" />
@@ -148,6 +151,7 @@
         android:hint="@string/termsInput"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
+        android:textColor="#FFFFFF"
         android:textColorHint="#C5CAE9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtInterestInput" />
@@ -163,6 +167,7 @@
         android:hint="@string/interestInput"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
+        android:textColor="#FFFFFF"
         android:textColorHint="#C5CAE9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAmountInput" />
@@ -210,7 +215,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
         android:entries="@array/DebtType"
-        android:textColor="#C5CAE9"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDebtNameInput" />
 
