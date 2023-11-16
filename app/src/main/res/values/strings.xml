@@ -26,6 +26,8 @@
     <string name="txtMemo">Memo</string>
     <string name="txtDebtMemo">Enter memo</string>
     <string name="txtPaymentCycle">Payment Cycle   *Compound is Monthly(APY)</string>
+    <string name="txtPaymentAmount">payment amount</string>
+    <string name="txtShowResult" />
     <string-array name="DebtType">
         <item>House</item>
         <item>Car</item>

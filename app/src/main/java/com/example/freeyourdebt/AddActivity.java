@@ -104,17 +104,17 @@ public class AddActivity extends AppCompatActivity {
                 double weeklyPayment = calculateLoanPayment(amountforCal, rateforCal, termforCal, 52);
                 paymentCycle = "Weekly";
                 paymentResult =  resultFormat.format(weeklyPayment);
-                showResult.setText("Your payment amount is "+paymentResult+ " per week");
+                showResult.setText(paymentResult);
             } else if (paymentBiweekly.isChecked()) {
                 double biWeeklyPayment = calculateLoanPayment(amountforCal, rateforCal, termforCal, 26);
                 paymentCycle = "Bi-weekly";
                 paymentResult =  resultFormat.format(biWeeklyPayment);
-                showResult.setText("Your payment amount is "+paymentResult+ " per Bi-week");
+                showResult.setText(paymentResult);
             } else if (paymentMonthly.isChecked()) {
                 double monthlyPayment = calculateLoanPayment(amountforCal, rateforCal, termforCal, 12);
                 paymentCycle = "Monthly";
                 paymentResult =  resultFormat.format(monthlyPayment);
-                showResult.setText("Your payment amount is "+paymentResult+ " per month");
+                showResult.setText(paymentResult);
             }  else{
                 Toast.makeText(AddActivity.this,"Please select a payment cycle",Toast.LENGTH_SHORT).show();
             }
@@ -122,11 +122,11 @@ public class AddActivity extends AppCompatActivity {
     }
 
     private void add2DB(){
-        if(paymentResult.length()==0){
+        if(showResult.getText().length()==0){
             calPayment();
         }else{
             databaseHelper = new DatabaseHelper(this);
-            boolean isAdded = databaseHelper.addDebtData("test",debtName,debtType,debtAmount,debtRate,debtTerms,debtMemo,paymentCycle,paymentResult);
+            boolean isAdded = databaseHelper.addDebtData("test",debtName,debtType,debtAmount,debtRate,debtTerms,debtMemo,paymentCycle,showResult.getText().toString());
             if(isAdded){
                 Toast.makeText(AddActivity.this,"added data successfully",Toast.LENGTH_SHORT).show();
             }else{

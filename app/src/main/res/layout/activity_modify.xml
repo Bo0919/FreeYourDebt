@@ -172,6 +172,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAmountInputModify" />
 
+    <TextView
+        android:id="@+id/txtPaymentAmountModify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="170dp"
+        android:text="@string/txtPaymentAmount"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPaymentCycleModify" />
+
     <RadioGroup
         android:id="@+id/radioGPayTypeModify"
         android:layout_width="250dp"
@@ -223,49 +235,64 @@
         android:id="@+id/btnReturnModify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
         android:background="#00BCD4"
         android:text="Return"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btnAdd2RecordModify"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toEndOf="@+id/btnDelModify"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/btnCalModify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
         android:background="#4CAF50"
         android:text="Calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <TextView
+    <EditText
         android:id="@+id/txtShowPaymentModify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="160dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="5dp"
+        android:hint="@string/txtShowResult"
+        android:inputType="number|numberDecimal"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPaymentCycleModify" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGPayTypeModify"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btnAdd2RecordModify"
-        android:layout_width="143dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
         android:background="#FFEB3B"
-        android:text="Submit Changes"
+        android:text="UPDATE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnCalModify"
+        tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnDelModify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="#F44336"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAdd2RecordModify"
         tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
