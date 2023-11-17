@@ -101,6 +101,7 @@ public class ModifyActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (showResultModify.getText().length() == 0) {
+                            Toast.makeText(ModifyActivity.this,"Payment can not be empty. Do calculating",Toast.LENGTH_SHORT).show();
                             calPayment();
                         } else {
                             Boolean isUpdated = databaseHelper.updateDebtRec(DIDInput, debtName, debtType, debtAmount, debtRate, debtTerms, debtMemo, paymentCycle, showResultModify.getText().toString());
@@ -183,7 +184,7 @@ public class ModifyActivity extends AppCompatActivity {
         } else if (debtRate.length()==0){
             Toast.makeText(ModifyActivity.this,"Debt Rate can not be empty",Toast.LENGTH_SHORT).show();
         } else if (debtTerms.length()==0){
-            Toast.makeText(ModifyActivity.this,"Debt Terms can 12not be empty",Toast.LENGTH_SHORT).show();
+            Toast.makeText(ModifyActivity.this,"Debt Terms can not be empty",Toast.LENGTH_SHORT).show();
         } else {
             DecimalFormat resultFormat = new DecimalFormat("0.###");
             int termforCal = Integer.parseInt(debtTerms);

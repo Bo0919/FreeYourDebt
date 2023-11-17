@@ -94,7 +94,7 @@ public class AddActivity extends AppCompatActivity {
         } else if (debtRate.length()==0){
             Toast.makeText(AddActivity.this,"Debt Rate can not be empty",Toast.LENGTH_SHORT).show();
         } else if (debtTerms.length()==0){
-            Toast.makeText(AddActivity.this,"Debt Terms can 12not be empty",Toast.LENGTH_SHORT).show();
+            Toast.makeText(AddActivity.this,"Debt Terms can not be empty",Toast.LENGTH_SHORT).show();
         } else {
             DecimalFormat resultFormat = new DecimalFormat("0.###");
             int termforCal = Integer.parseInt(debtTerms);
@@ -122,9 +122,11 @@ public class AddActivity extends AppCompatActivity {
     }
 
     private void add2DB(){
-        if(showResult.getText().length()==0){
+
+        if (showResult.getText().length() == 0) {
+            Toast.makeText(AddActivity.this,"Payment can not be empty. Do calculating",Toast.LENGTH_SHORT).show();
             calPayment();
-        }else{
+            } else{
             databaseHelper = new DatabaseHelper(this);
             boolean isAdded = databaseHelper.addDebtData("test",debtName,debtType,debtAmount,debtRate,debtTerms,debtMemo,paymentCycle,showResult.getText().toString());
             if(isAdded){

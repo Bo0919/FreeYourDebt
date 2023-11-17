@@ -5,8 +5,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.graphics.Bitmap;
+
 import androidx.annotation.Nullable;
 
+import java.sql.Blob;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -14,7 +17,7 @@ import java.util.Date;
 public class DatabaseHelper extends SQLiteOpenHelper {
     String currentDateandTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
     final static String DATABASE_NAME = "Information.db";
-    final static int DATABASE_VERSION = 1;
+    final static int DATABASE_VERSION = 3;
 
     //table1
     final static String TABLE1_NAME = "USER_INFO";
@@ -37,6 +40,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     final static String T2COL11 = "create_date";
     final static String T2COL12 = "modify_date";
 
+    //table 3
+    final static  String TABLE3_NAME = "USER_IMAGE";
+    final static  String T3COL1 = "user_name";
+    final static  String T3COL2 = "image_data";
+    final static String T3COL3 = "create_date";
+    final static String T3COL4 = "modify_date";
 
     public DatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -45,11 +54,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String query = "CREATE TABLE " + TABLE1_NAME + "( " + T1COL1 + " TEXT, " + T1COL2 + " TEXT, " + T1COL3 + " TEXT) ";
+        String query = "CREATE TABLE " + TABLE1_NAME + "( " + T1COL1 + " TEXT PRIMARY KEY, " + T1COL2 + " TEXT, " + T1COL3 + " TEXT) ";
 
         String query2 = "CREATE TABLE " + TABLE2_NAME + "( " + T2COL1 + " INTEGER PRIMARY KEY, " + T2COL2 + " TEXT, " + T2COL3 + " TEXT, " + T2COL4 + " TEXT, " + T2COL5 + " TEXT," + T2COL6 + " TEXT, " + T2COL7 + " TEXT, " + T2COL8 + " TEXT, " + T2COL9 + " TEXT," + T2COL10 + " TEXT, " + T2COL11 + " TEXT, " + T2COL12 + " TEXT) ";
+        String query3 = "CREATE TABLE " + TABLE3_NAME + "( " + T3COL1 + " TEXT PRIMARY KEY, " + T3COL2 + " BLOB, " + T3COL3 + " TEXT, " + T3COL4 + " TEXT) ";
         sqLiteDatabase.execSQL(query);
         sqLiteDatabase.execSQL(query2);
+        sqLiteDatabase.execSQL(query3);
 
     }
 
@@ -57,6 +68,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE1_NAME);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE2_NAME);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE3_NAME);
         onCreate(sqLiteDatabase);
     }
     public Cursor login(String username,String password){
@@ -79,6 +91,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return cursor;
     }
+    public Cursor viewUserImg(String userName) {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+        String query = "SELECT * FROM " + TABLE3_NAME + " WHERE user_name = ?";
+        Cursor cursor = sqLiteDatabase.rawQuery(query,new String[]{userName});
+
+        return cursor;
+    }
 
     public boolean addUserData(String username,String password){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
@@ -92,6 +111,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(T1COL3,currentDateandTime);
 
         long l = sqLiteDatabase.insert(TABLE1_NAME,null,values);
+
+        if(l>0)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean addUserImg(String username, byte[] image){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        if (!sqLiteDatabase.isReadOnly()) {
+            // Enable foreign key constraints
+            sqLiteDatabase.execSQL("PRAGMA foreign_keys=ON;");
+        }
+        ContentValues values = new ContentValues();
+        values.put(T3COL1,username);
+        values.put(T3COL2, image);
+        values.put(T3COL3,currentDateandTime);
+        long l = sqLiteDatabase.insert(TABLE3_NAME,null,values);
 
         if(l>0)
             return true;
@@ -145,6 +182,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(T2COL12,currentDateandTime);
         int i = sqLiteDatabase.update(TABLE2_NAME,
                 values,"bid=?",new String[]{bid});
+        if(i>0)
+            return true;
+        else
+            return false;
+    }
+    public boolean updateUserImg(String username, byte[] image){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        if (!sqLiteDatabase.isReadOnly()) {
+            // Enable foreign key constraints
+            sqLiteDatabase.execSQL("PRAGMA foreign_keys=ON;");
+        }
+        ContentValues values = new ContentValues();
+        values.put(T3COL2, image);
+        values.put(T3COL4,currentDateandTime);
+
+        int i = sqLiteDatabase.update(TABLE3_NAME,
+                values,"user_name=?",new String[]{username});
         if(i>0)
             return true;
         else

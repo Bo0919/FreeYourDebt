@@ -8,43 +8,46 @@
     tools:context=".MainScreenActivity">
 
     <Button
+        android:id="@+id/btnList"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:background="#FF9800"
+        android:text="@string/btnList"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnManagement" />
+
+    <Button
         android:id="@+id/btnAddNew"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="80dp"
         android:background="#8BC34A"
         android:text="@string/btnAdd"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imgUser" />
 
     <Button
         android:id="@+id/btnManagement"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:background="#FFEB3B"
         android:text="@string/btnManagement"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAddNew" />
 
-    <Button
-        android:id="@+id/btnList"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="12dp"
-        android:background="#FF9800"
-        android:text="@string/btnList"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnManagement" />
-
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgUser"
         android:layout_width="150dp"
         android:layout_height="124dp"
         android:layout_marginTop="84dp"
@@ -82,4 +85,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnList"
         app:layout_constraintVertical_bias="0.428" />
+
+    <Button
+        android:id="@+id/btnTakePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Take a photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgUser" />
 </androidx.constraintlayout.widget.ConstraintLayout>
