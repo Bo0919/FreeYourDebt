@@ -1,5 +1,6 @@
 package com.example.freeyourdebt;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -19,7 +20,6 @@ public class LoginActivity extends AppCompatActivity {
         databaseHelper = new DatabaseHelper(this);
 
         btnLogin = findViewById(R.id.btnLogin);
-        btnRegister = findViewById(R.id.btnRegister);
         btnCancel = findViewById(R.id.btnCancel);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -32,12 +32,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        btnRegister.setOnClickListener(new View.OnClickListener() {
+        getOnBackPressedDispatcher().addCallback(new OnBackPressedCallback(true) {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
-                startActivity(intent);
-            }
+            public void handleOnBackPressed() {}
         });
     }
 }

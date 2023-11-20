@@ -7,12 +7,13 @@
     android:background="#673AB7"
     tools:context=".ModifyActivity">
 
+
     <TextView
         android:id="@+id/txtDebtNameModify"
-        android:layout_width="110dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="@dimen/dp_110"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_20"
         android:text="@string/debtName"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -21,23 +22,22 @@
 
     <TextView
         android:id="@+id/txtDebtTypeModify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_width="@dimen/dp_110"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_20"
         android:text="@string/debtType"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDebtNameModify" />
 
     <EditText
         android:id="@+id/txtDebtNameInputModify"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="5dp"
+        android:layout_width="@dimen/dp_220"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_5"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/debtInput"
@@ -49,10 +49,10 @@
 
     <EditText
         android:id="@+id/txtDebtMemoModify"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="5dp"
+        android:layout_width="@dimen/dp_220"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_5"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/txtDebtMemo"
@@ -64,10 +64,10 @@
 
     <EditText
         android:id="@+id/txtAmountInputModify"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="5dp"
+        android:layout_width="@dimen/dp_220"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_5"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/txtMountInput"
@@ -80,23 +80,22 @@
 
     <TextView
         android:id="@+id/txtDebtAmountModify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_width="@dimen/dp_110"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_20"
         android:text="@string/debtAmount"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/txtAmountInputModify"
-        app:layout_constraintHorizontal_bias="0.205"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDebtTypeModify" />
 
     <TextView
         android:id="@+id/txtDebtInterestModify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="@dimen/dp_110"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_10"
         android:text="@string/debtInterest"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -105,10 +104,10 @@
 
     <TextView
         android:id="@+id/txtTermsModify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="@dimen/dp_110"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_15"
         android:text="@string/terms"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -117,23 +116,34 @@
 
     <TextView
         android:id="@+id/txtMemoModify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_width="@dimen/dp_110"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_10"
         android:text="@string/txtMemo"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/txtDebtMemoModify"
-        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTermsModify" />
 
     <TextView
+        android:id="@+id/txtPaymentAmountModify"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_120"
+        android:text="@string/txtPaymentAmount"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPaymentCycleModify" />
+
+    <TextView
         android:id="@+id/txtPaymentCycleModify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_20"
         android:text="@string/txtPaymentCycle"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -142,10 +152,10 @@
 
     <EditText
         android:id="@+id/txtTermInputModify"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="5dp"
+        android:layout_width="@dimen/dp_220"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_5"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/termsInput"
@@ -158,10 +168,10 @@
 
     <EditText
         android:id="@+id/txtInterestInputModify"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="5dp"
+        android:layout_width="@dimen/dp_220"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_5"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/interestInput"
@@ -172,48 +182,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAmountInputModify" />
 
-    <TextView
-        android:id="@+id/txtPaymentAmountModify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="170dp"
-        android:text="@string/txtPaymentAmount"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPaymentCycleModify" />
-
     <RadioGroup
         android:id="@+id/radioGPayTypeModify"
-        android:layout_width="250dp"
-        android:layout_height="148dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="5dp"
+        android:layout_width="@dimen/dp_220"
+        android:layout_height="@dimen/dp_148"
+        android:layout_marginRight="@dimen/dp_5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDebtMemoModify"
         tools:ignore="TextSizeCheck">
 
         <RadioButton
             android:id="@+id/rbWeeklyModify"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/dp_220"
+            android:layout_height="@dimen/dp_48"
             android:minHeight="48dp"
-            android:text="Weekly paymentModify"
+            android:text="Weekly payment"
             android:textColor="#C5CAE9" />
 
         <RadioButton
             android:id="@+id/rbBWeeklyModify"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/dp_220"
+            android:layout_height="@dimen/dp_48"
             android:minHeight="48dp"
             android:text="Bi-weekly payment"
             android:textColor="#C5CAE9" />
 
         <RadioButton
             android:id="@+id/rbMonthlyModify"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/dp_220"
+            android:layout_height="@dimen/dp_48"
             android:minHeight="48dp"
             android:text="Monthly payment"
             android:textColor="#C5CAE9" />
@@ -222,61 +219,62 @@
 
     <Spinner
         android:id="@+id/spinnerDebtTypeModify"
-        android:layout_width="250dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="5dp"
+        android:layout_width="@dimen/dp_220"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_5"
         android:entries="@array/DebtType"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDebtNameInputModify" />
 
+
+    <EditText
+        android:id="@+id/txtShowPaymentModify"
+        android:layout_width="@dimen/dp_220"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:autofillHints=""
+        android:hint="@string/txtShowResult"
+        android:inputType="number|numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGPayTypeModify" />
+
+
     <Button
         android:id="@+id/btnReturnModify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_5"
         android:background="#00BCD4"
         android:text="Return"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
         app:layout_constraintStart_toEndOf="@+id/btnDelModify"
         tools:ignore="TouchTargetSizeCheck" />
 
+
     <Button
         android:id="@+id/btnCalModify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_5"
         android:background="#4CAF50"
         android:text="Calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/txtShowPaymentModify"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="5dp"
-        android:hint="@string/txtShowResult"
-        android:inputType="number|numberDecimal"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGPayTypeModify"
-        android:autofillHints="" />
-
     <Button
         android:id="@+id/btnAdd2RecordModify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_5"
         android:background="#FFEB3B"
         android:text="UPDATE"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -285,10 +283,10 @@
 
     <Button
         android:id="@+id/btnDelModify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_5"
         android:background="#F44336"
         android:text="Delete"
         app:layout_constraintBottom_toBottomOf="parent"

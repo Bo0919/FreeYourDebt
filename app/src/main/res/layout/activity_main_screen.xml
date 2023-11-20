@@ -9,48 +9,46 @@
 
     <Button
         android:id="@+id/btnList"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_80"
+        android:layout_marginTop="@dimen/dp_10"
         android:background="#FF9800"
         android:text="@string/btnList"
-        android:textSize="18sp"
+        android:textSize="@dimen/sp_18"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnManagement" />
 
     <Button
-        android:id="@+id/btnAddNew"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="80dp"
-        android:background="#8BC34A"
-        android:text="@string/btnAdd"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgUser" />
-
-    <Button
         android:id="@+id/btnManagement"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_80"
+        android:layout_marginTop="@dimen/dp_10"
         android:background="#FFEB3B"
         android:text="@string/btnManagement"
-        android:textSize="18sp"
+        android:textSize="@dimen/sp_18"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAddNew" />
 
+    <Button
+        android:id="@+id/btnAddNew"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_80"
+        android:background="#8BC34A"
+        android:text="@string/btnAdd"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTakePhoto" />
+
     <ImageView
         android:id="@+id/imgUser"
-        android:layout_width="150dp"
-        android:layout_height="124dp"
-        android:layout_marginTop="84dp"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_180"
+        android:layout_marginTop="@dimen/dp_60"
         android:contentDescription="userImg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -61,12 +59,12 @@
 
     <TextView
         android:id="@+id/txtGreeting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_5"
         android:text="Hello Mr. XYZ"
         android:textColor="#FFFFFF"
-        android:textSize="32sp"
+        android:textSize="@dimen/sp_32"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,9 +72,10 @@
 
     <Button
         android:id="@+id/btnLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_5"
         android:background="#E91E63"
         android:text="@string/btnLogout"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -88,9 +87,9 @@
 
     <Button
         android:id="@+id/btnTakePhoto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_5"
         android:text="Take a photo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
