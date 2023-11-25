@@ -3,7 +3,9 @@ package com.example.freeyourdebt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,11 +24,13 @@ public class AddActivity extends AppCompatActivity {
     RadioButton paymentWeekly,paymentMonthly,paymentBiweekly;
     EditText debtNameInput,debtAmountInput,debtRateInput,debtTermsInput,debtMemoInput;
     TextView showResult;
-    String debtName,debtAmount,debtRate,debtTerms,debtMemo,debtType,paymentCycle,paymentResult;
+    String debtName,debtAmount,debtRate,debtTerms,debtMemo,debtType,paymentCycle,paymentResult,userName;;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        userName =sharedPreferences.getString("USERNAME","");
         debtNameInput = findViewById(R.id.txtDebtNameInput);
         debtTypeInput = findViewById(R.id.spinnerDebtType);
         debtAmountInput = findViewById(R.id.txtAmountInput);
@@ -95,7 +99,7 @@ public class AddActivity extends AppCompatActivity {
             Toast.makeText(AddActivity.this,"Debt Rate can not be empty",Toast.LENGTH_SHORT).show();
         } else if (debtTerms.length()==0){
             Toast.makeText(AddActivity.this,"Debt Terms can not be empty",Toast.LENGTH_SHORT).show();
-        } else {
+        }else {
             DecimalFormat resultFormat = new DecimalFormat("0.###");
             int termforCal = Integer.parseInt(debtTerms);
             Double amountforCal = Double.parseDouble(debtAmount);
@@ -128,7 +132,7 @@ public class AddActivity extends AppCompatActivity {
             calPayment();
             } else{
             databaseHelper = new DatabaseHelper(this);
-            boolean isAdded = databaseHelper.addDebtData("test",debtName,debtType,debtAmount,debtRate,debtTerms,debtMemo,paymentCycle,showResult.getText().toString());
+            boolean isAdded = databaseHelper.addDebtData(userName,debtName,debtType,debtAmount,debtRate,debtTerms,debtMemo,paymentCycle,showResult.getText().toString());
             if(isAdded){
                 Toast.makeText(AddActivity.this,"added data successfully",Toast.LENGTH_SHORT).show();
             }else{

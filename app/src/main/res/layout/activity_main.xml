@@ -11,35 +11,40 @@
         android:id="@+id/btnCancel"
         android:layout_width="@dimen/dp_130"
         android:layout_height="@dimen/dp_50"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="@dimen/dp_60"
+        android:layout_marginEnd="@dimen/dp_20"
         android:background="#F44336"
         android:text="@string/btnCancel"
         android:textColorLink="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPassInput"
+        app:layout_constraintVertical_bias="0.213"
         app:rippleColor="#FFEB3B" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="@dimen/dp_130"
         android:layout_height="@dimen/dp_50"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_60"
         android:background="#FFEB3B"
         android:text="@string/btnLogin"
         android:textColorLink="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnCancel"
-        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintHorizontal_bias="0.283"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPassInput"
+        app:layout_constraintVertical_bias="0.213"
         app:rippleColor="#FFEB3B" />
 
     <EditText
-        android:id="@+id/txtPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/txtPassGetInput"
+        android:layout_width="@dimen/dp_180"
+        android:layout_height="@dimen/dp_50"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_30"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/passHint"
@@ -49,13 +54,13 @@
         android:textColorHint="#B39DDB"
         android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUserNameGetInput" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="@dimen/dp_300"
         android:layout_height="@dimen/dp_290"
-        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_30"
         android:contentDescription="@string/imgMain"
         android:src="@drawable/main_loging"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,11 +69,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/txtUserNameGetInput"
+        android:layout_width="@dimen/dp_180"
+        android:layout_height="@dimen/dp_50"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_30"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/usernameHint"
@@ -81,28 +86,28 @@
 
     <TextView
         android:id="@+id/txtUserInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_30"
         android:text="@string/userInput"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#000000"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText"
+        app:layout_constraintEnd_toStartOf="@+id/txtUserNameGetInput"
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/txtPassInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_30"
         android:text="@string/passInput"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/txtPass"
+        app:layout_constraintEnd_toStartOf="@+id/txtPassGetInput"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtUserInput" />

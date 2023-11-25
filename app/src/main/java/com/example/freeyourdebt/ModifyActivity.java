@@ -185,7 +185,7 @@ public class ModifyActivity extends AppCompatActivity {
             Toast.makeText(ModifyActivity.this,"Debt Rate can not be empty",Toast.LENGTH_SHORT).show();
         } else if (debtTerms.length()==0){
             Toast.makeText(ModifyActivity.this,"Debt Terms can not be empty",Toast.LENGTH_SHORT).show();
-        } else {
+        }else {
             DecimalFormat resultFormat = new DecimalFormat("0.###");
             int termforCal = Integer.parseInt(debtTerms);
             Double amountforCal = Double.parseDouble(debtAmount);

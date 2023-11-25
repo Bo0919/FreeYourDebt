@@ -6,8 +6,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -20,13 +22,16 @@ public class ManagementActivity extends AppCompatActivity implements ItemClickLi
     ArrayList<RecycleViewModel> arrayList = new ArrayList<>();
 
     DatabaseHelper databaseHelper;
+
+    String userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_management);
         btnReturnManagement = findViewById(R.id.btnReturnManagement);
         recyclerView =findViewById(R.id.RecyclerViewList);
-
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        userName =sharedPreferences.getString("USERNAME","");
         setUpDebtListModels();
         debtItemAdapter = new DebtItemAdapter(this,arrayList,this);
         recyclerView.setAdapter(debtItemAdapter);
@@ -43,7 +48,7 @@ public class ManagementActivity extends AppCompatActivity implements ItemClickLi
 
     private void setUpDebtListModels(){
         databaseHelper = new DatabaseHelper(this);
-        Cursor cursor = databaseHelper.viewDebtList();
+        Cursor cursor = databaseHelper.viewDebtList(userName);
         if(cursor.getCount()>0){
             while (cursor.moveToNext()){
                 arrayList.add(new RecycleViewModel(cursor.getString(3),cursor.getString(2),

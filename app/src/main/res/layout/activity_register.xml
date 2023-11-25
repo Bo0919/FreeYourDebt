@@ -8,11 +8,27 @@
     tools:context=".RegisterActivity">
 
     <EditText
-        android:id="@+id/txtPassInput4Register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="50dp"
+        android:id="@+id/txtUserNameInput"
+        android:layout_width="@dimen/dp_180"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Enter your User Name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#C5CAE9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgRegister" />
+
+    <EditText
+        android:id="@+id/txtPasswordInput"
+        android:layout_width="@dimen/dp_180"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:autofillHints=""
         android:ems="10"
         android:hint="Enter your Password"
         android:inputType="text"
@@ -20,92 +36,46 @@
         android:text=""
         android:textColorHint="#C5CAE9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmailInput"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUserNameInput" />
 
     <TextView
-        android:id="@+id/txtEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="15dp"
-        android:text="E-mail Address"
+        android:id="@+id/txtUserName"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_70"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:text="User Name"
         android:textColor="#C5CAE9"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/txtEmailInput"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLastName" />
-
-    <TextView
-        android:id="@+id/txtLastName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="15dp"
-        android:text="Last Name"
-        android:textColor="#C5CAE9"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/txtLastNameInput"
-        app:layout_constraintHorizontal_bias="0.661"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFirstName" />
-
-    <EditText
-        android:id="@+id/txtEmailInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="50dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="Enter your E-mail Address"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        android:text=""
-        android:textColorHint="#C5CAE9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLastNameInput" />
-
-    <EditText
-        android:id="@+id/txtLastNameInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="50dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="Enter your Last Name"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:text=""
-        android:textColorHint="#C5CAE9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFirstNameInput" />
-
-    <TextView
-        android:id="@+id/txtFirstName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="15dp"
-        android:text="Firsta Name"
-        android:textColor="#C5CAE9"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/txtFirstNameInput"
-        app:layout_constraintHorizontal_bias="0.656"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toStartOf="@+id/txtUserNameInput"
+        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgRegister" />
 
+    <TextView
+        android:id="@+id/txtLastName"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_marginEnd="15dp"
+        android:text="Password"
+        android:textColor="#C5CAE9"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toStartOf="@+id/txtPasswordInput"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserName" />
+
     <ImageView
         android:id="@+id/imgRegister"
-        android:layout_width="414dp"
-        android:layout_height="248dp"
+        android:layout_width="389dp"
+        android:layout_height="@dimen/dp_250"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_10"
         android:contentDescription="img of Register"
-        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,61 +83,32 @@
         app:srcCompat="@drawable/register"
         tools:ignore="VisualLintBounds" />
 
-    <EditText
-        android:id="@+id/txtFirstNameInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="50dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="Enter your First Name"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:text="Name"
-        android:textColor="#C5CAE9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgRegister" />
-
-    <TextView
-        android:id="@+id/txtPass4Register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="15dp"
-        android:text="Password"
-        android:textColor="#C5CAE9"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/txtPassInput4Register"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
-
     <Button
         android:id="@+id/btnCancelRegister"
-        android:layout_width="131dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="48dp"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_70"
+        android:layout_marginEnd="@dimen/dp_30"
         android:background="#F44336"
         android:text="@string/btnCancel"
         android:textColorLink="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPassInput4Register"
+        app:layout_constraintTop_toBottomOf="@+id/txtPasswordInput"
         app:rippleColor="#FFEB3B" />
 
     <Button
         android:id="@+id/btnSubmitRegister"
-        android:layout_width="131dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="56dp"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_70"
         android:background="#4CAF50"
         android:text="@string/btnSubmit"
         android:textColorLink="#FFEB3B"
         app:layout_constraintEnd_toStartOf="@+id/btnCancelRegister"
+        app:layout_constraintHorizontal_bias="0.287"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPass4Register"
+        app:layout_constraintTop_toBottomOf="@+id/txtLastName"
         app:rippleColor="#FFEB3B" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

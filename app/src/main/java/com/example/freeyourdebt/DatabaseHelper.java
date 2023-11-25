@@ -71,16 +71,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE3_NAME);
         onCreate(sqLiteDatabase);
     }
-    public Cursor login(String username,String password){
+    public Cursor login(String userName){
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
-        String query = "SELECT * FROM " + TABLE1_NAME;;
-        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+        String query = "SELECT * FROM " + TABLE1_NAME + " WHERE user_name = ?";
+        Cursor cursor = sqLiteDatabase.rawQuery(query, new  String[]{userName});
         return cursor;
     }
-    public Cursor viewDebtList() {
+    public Cursor viewDebtList(String userName) {
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
-        String query = "SELECT * FROM " + TABLE2_NAME;
-        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+        String query = "SELECT * FROM " + TABLE2_NAME+ " WHERE user_name = ?";
+        Cursor cursor = sqLiteDatabase.rawQuery(query, new  String[]{userName});
         return cursor;
     }
 
