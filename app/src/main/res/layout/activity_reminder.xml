@@ -24,35 +24,82 @@
         android:id="@+id/debtorNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:textColor="@android:color/black"
+        android:layout_marginTop="52dp"
+        android:text="Debt Name: "
         android:textSize="18sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="@+id/paymentTypeTextView"
         app:layout_constraintTop_toBottomOf="@+id/txtRemiderTitle" />
 
     <TextView
-        android:id="@+id/amountTextView"
-        android:layout_width="5dp"
-        android:layout_height="30dp"
+        android:id="@+id/paymentTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/debtorNameTextView"
-        android:layout_marginTop="70dp"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
+        android:layout_marginTop="55dp"
+        android:text="Payment Type: "
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/debtorNameTextView" />
 
     <TextView
+        android:id="@+id/debtCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymentTypeTextView"
+        android:layout_marginTop="44dp"
+        android:text="Debt Count: "
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/paymentTextView"
+        app:layout_constraintTop_toBottomOf="@+id/paymentTypeTextView" />
+
+    <TextView
+        android:id="@+id/paymentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/debtCountTextView"
+        android:layout_marginTop="50dp"
+        android:text="Payment: "
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/debtCountTextView" />
+
+    <TextView
         android:id="@+id/dueDateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/amountTextView"
-        android:layout_marginTop="70dp"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
+        android:layout_below="@id/paymentTextView"
+        android:layout_marginTop="50dp"
+        android:text="Next Payment Due Date: "
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amountTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/paymentTextView" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/dueDateTextView"
+        android:layout_marginStart="28dp"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="473dp" />
+
+    <Button
+        android:id="@+id/setReminderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dueDateTextView"
+        android:layout_toEndOf="@id/backButton"
+        android:text="Set Reminder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="473dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

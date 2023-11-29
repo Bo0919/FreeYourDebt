@@ -74,5 +74,17 @@ public class ListActivity extends AppCompatActivity implements ItemClickListener
         Intent intent = new Intent(ListActivity.this, ReminderActivity.class);
         intent.putExtra("DID",arrayList.get(position).getDebtID());
         startActivity(intent);
+
+        RecycleViewModel selectedDebt = arrayList.get(position);
+
+        Intent reminderIntent = new Intent(ListActivity.this, ReminderActivity.class);
+        reminderIntent.putExtra("DID", selectedDebt.getDebtID());
+        reminderIntent.putExtra("DebtName", selectedDebt.getDebtName());
+        reminderIntent.putExtra("PaymentType", selectedDebt.getDebtPayment());
+        reminderIntent.putExtra("DebtCount", selectedDebt.getDebtCount());
+        reminderIntent.putExtra("Amount", selectedDebt.getDebtAmount());
+        reminderIntent.putExtra("DueDate", selectedDebt.getDueDate());
+        startActivity(reminderIntent);
+
     }
 }

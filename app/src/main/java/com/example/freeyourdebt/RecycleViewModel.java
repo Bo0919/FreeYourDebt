@@ -8,6 +8,9 @@ public class RecycleViewModel {
     private String debtAmount;
     private String debtPayment;
 
+    private String debtCount;
+    private String dueDate;
+
     public RecycleViewModel(String debtImg,String debtName,String debtID, String debtType, String debtAmount, String debtPayment ) {
         this.debtImg = debtImg;
         this.debtName = debtName;
@@ -39,6 +42,14 @@ public class RecycleViewModel {
 
     public String getDebtPayment() {
         return debtPayment;
+    }
+
+    public String getDebtCount(){
+        return  debtCount;
+    }
+
+    public String getDueDate(){
+        return dueDate;
     }
 }
 
