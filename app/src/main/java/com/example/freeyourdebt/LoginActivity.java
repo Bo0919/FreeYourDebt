@@ -34,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         btnCancel = findViewById(R.id.btnCancel);
         userNameInput = findViewById(R.id.txtUserNameGetInput);
         passInput = findViewById(R.id.txtPassGetInput);
+        Boolean isDeleted = databaseHelper.deleteDebtRec("14");
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
