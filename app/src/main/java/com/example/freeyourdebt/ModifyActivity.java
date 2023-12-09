@@ -104,6 +104,12 @@ public class ModifyActivity extends AppCompatActivity {
                             Toast.makeText(ModifyActivity.this,"Payment can not be empty. Do calculating",Toast.LENGTH_SHORT).show();
                             calPayment();
                         } else {
+                            debtName = debtNameInputModify.getText().toString();
+                            debtAmount = debtAmountInputModify.getText().toString();
+                            debtRate = debtRateInputModify.getText().toString();
+                            debtTerms = debtTermsInputModify.getText().toString();
+                            debtMemo = debtMemoInputModify.getText().toString();
+                            debtType = debtTypeInputModify.getSelectedItem().toString();
                             Boolean isUpdated = databaseHelper.updateDebtRec(DIDInput, debtName, debtType, debtAmount, debtRate, debtTerms, debtMemo, paymentCycle, showResultModify.getText().toString());
                             if(isUpdated){
                                 Toast.makeText(ModifyActivity.this,"update data successfully",Toast.LENGTH_SHORT).show();
